@@ -49,7 +49,6 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 const nav = document.querySelectorAll("nav a");
 
-// nav.forEach(element => element.getElementsByClassName.color = "green");
 
 nav[0].textContent = siteContent.nav["nav-item-1"];
 nav[1].textContent = siteContent.nav["nav-item-2"];
@@ -63,6 +62,22 @@ mainTitle.innerHTML = siteContent['cta']['h1'];
 
 const mainBtn = document.querySelector(".cta button");
 mainBtn.innerHTML = siteContent["cta"]["button"];
+
+nav.forEach(element => element.style.color = "green");
+
+//new nav Items
+
+const nav2 = document.querySelector("nav");
+
+const newItem1 = document.createElement('a');
+newItem1.textContent = "DOM";
+nav2.prepend(newItem1);
+newItem1.style.color = "green";
+
+const newItem2 = document.createElement('a');
+newItem2.textContent = "Get Started";
+nav2.appendChild(newItem2);
+newItem2.style.color = "green";
 
 //middle Content
 
